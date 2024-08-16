@@ -17,7 +17,7 @@ const upload = multer({ storage: storage });
 const createPost = async (req, res) => {
     try {
         const { userid, comment } = req.body;
-        const image = req.file ? req.file.filename : ''; // Get the filename from multer
+        const image = req.file ? req.file.filename : ''; 
         
         if (!userid || !comment) {
             return res.status(400).json({ message: 'User ID and comment are required' });
